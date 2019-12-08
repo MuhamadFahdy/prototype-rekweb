@@ -3,7 +3,7 @@
       <div class="row">
         <div class=" col-6">
           <br>
-          <h3>Form Tambah Barang</h3>
+          <h3>Form Hapus Barang</h3>
           <form method="post" action="">
               <div class="form-group">
                 <input type="hidden" name="id" value="<?= $barang['id']?>">

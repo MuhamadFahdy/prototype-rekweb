@@ -22,30 +22,21 @@
     <div class="col-sm-3">
       <div class="card">
         <div class="card-image">
-          <img  src="<?= base_url('assets/')?>img/<?= $key['img_barang']?>.jpg" width="250">
+          <img  src="<?= base_url('assets/')?>img/<?= $key['img_barang']?>" width="250" height="200">
         </div>
 
         <div class="card-content">
-          <p><?= $key['nama_barang'] ?></p>
+          <h3 class=""><?= $key['nama_barang'] ?></h3>
         </div>
 
-          <div class="card-content">
-          <p><?= $key['nama_barang'] ?></p>
-        </div>
-
-          <div class="card-content">
-          <p><?= $key['nama_barang'] ?></p>
-        </div>
         <div class="card-action">
-          <a href="#" target="new_blank">Link</a>
-          <a href="#" target="new_blank">Link</a>
-
+          <h2 href="#" target="new_blank">Rp.<?= $key['harga_barang'] ?></h2>
+          <hr>
+          <a  class="btn btn-primary col-lg-12" href="#" target="new_blank">detail</a>
         </div>
       </div>
     </div>
-
       <?php endforeach ?>
-
     </div>
   </div>
 
