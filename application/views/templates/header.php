@@ -43,9 +43,11 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav ml-auto py-4 py-md-0">
                 <li>
-                  <form class="form-inline">
-                    <input class="form-control " type="search" placeholder="Search" aria-label="Search">
-                  </form> 
+                  <!-- search -->
+                  <form  action="" method="post">
+                    <input type="text" class="form-control" placeholder="Cari Data Barang" name="keyword">
+                  </form>
+                  <!-- end search  -->
                 </li>
                 <li class="nav-item  ml-md-4 active">
                   <a class="nav-link" href="<?= base_url("");?>" role="button" aria-haspopup="true" aria-expanded="false">Home</a>
