@@ -1,6 +1,6 @@
 <? php
 
-class Category extends CI_Controller{
+class Kategori extends CI_Controller{
 	public function laptop()
 	{
 		$data['laptop'] = $this->Kategori_Model->data_laptop()->result();
