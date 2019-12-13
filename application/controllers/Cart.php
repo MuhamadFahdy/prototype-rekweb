@@ -38,5 +38,29 @@ class Cart extends CI_Controller
 		$this->load->view('cart/index');
 		$this->load->view('templates/footer');
 	}
+
+	public function delete_cart()
+    {
+		$this->cart->destroy();
+        redirect('shop/index');
+    }
+
+    public function pay()
+    {
+    	$data['title'] = 'Pay Page';
+    	$this->load->view('templates/header',$data);
+		$this->load->view('cart/pay');
+		$this->load->view('templates/footer');
+    }
+
+    public function order_process()
+    {
+    	$this->cart->destroy();
+    	$this->load->view('templates/header');
+		$this->load->view('cart/process');
+		$this->load->view('templates/footer');
+	}
+	
+
 		
 }
