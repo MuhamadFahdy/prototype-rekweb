@@ -1,6 +1,6 @@
 <div class="container-fluid">
 
-           <div class="row text-center mt-4">
+           <div class="row text-center my-4">
                   <?php foreach ($barang as $key) : ?>
 
               <div class="card ml-4 mt-4 border-dark" style="width: 20rem;">
