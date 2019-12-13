@@ -1,4 +1,7 @@
-<div class="container-fluid">
+<h4>Helloooooooooooooooooo</h4>
+
+
+<!-- <div class="container-fluid">
 
            <div class="row text-center mt-4">
                   <?php foreach ($laptop as $key) : ?>
@@ -24,4 +27,5 @@
               </div>
                   <?php endforeach ?>
               </div>
-         </div>
+         </div> -->
+

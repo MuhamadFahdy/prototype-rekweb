@@ -61,9 +61,23 @@
                 <li class="nav-item  ml-md-4 active">
                   <a class="nav-link" href="<?= base_url("");?>" role="button" aria-haspopup="true" aria-expanded="false">Home</a>
                 </li>
+
+           <div class="dropdown ml-1 mr-1">
+              <a class="btn btn-light dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Dropdown link
+              </a>
+
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <a class="dropdown-item" href="<?= base_url("laps");?>">Action</a>
+                <a class="dropdown-item" href="<?= base_url("shop");?>">Another action</a>
+                <a class="dropdown-item" href="<?= base_url("shop");?>">Something else here</a>
+              </div>
+            </div>
+<!-- 
                 <li class="nav-item  ml-md-4">
                   <a class="nav-link" href="<?= base_url("shop");?>">Shop</a>
-                </li>
+                </li> -->
+
                 <li class="nav-item  ml-md-4">
                   <a class="nav-link" href="<?= base_url("cart");?>">Cart</a>
                 </li>
@@ -71,8 +85,6 @@
                   <a class="nav-link" href="<?= base_url("auth");?>">Login</a>
                 </li>
                 
-                
-
               </ul>
             </div>
             

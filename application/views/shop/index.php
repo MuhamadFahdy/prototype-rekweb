@@ -1,20 +1,20 @@
 <div class="container-fluid">
-  <div class="row my-4">
-
+  <div class="row mt-5 mb-5">
+    
            <div class="row text-center my-4">
                   <?php foreach ($barang as $key) : ?>
 
-              <div class="card ml-4 mt-4 border-dark" style="width: 20rem;">
+                <div class="card ml-3 my-3 border-dark" style="width: 15rem;">
 
                 <img src="<?= base_url('assets/')?>img/<?= $key['img_barang']?>.jpg" class="card-img-top" alt="logo" width="200">
 
                 <div class="card-body">
-                  <h5 class="card-title"><?= $key['nama_barang'] ?></h5>
+                  <h4 class="card-title"><?= $key['nama_barang'] ?></h4>
                   <p class="card-text"><?= $key['brand_barang'] ?></p> 
                 </div>
 
                 <ul class="list-group list-group-flush">
-                  <li class="list-group-item">Rp. <?= number_format($key['harga_barang'], 0,',',',') ?></li>
+                  <li class="list-group-item"><h4>Rp. <?= number_format($key['harga_barang'], 0,',',',') ?></li>
                 </ul>
 
                 <div class="card-body">
