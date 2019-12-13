@@ -32,7 +32,7 @@ class Barang_Model extends CI_Model {
 		$this->db->insert('penjualan', $data);
 	}
   
-<<<<<<< HEAD
+//<<<<<<< HEAD
   // Fungsi untuk menyimpan data ke database
 
 
@@ -45,11 +45,23 @@ class Barang_Model extends CI_Model {
 			$this->db->or_like('harga_barang',$keyword);
 			return $this->db->get('penjualan')->result_array();
 		}	
-=======
+//=======
 	public function getBarangID($id_barang)
 	{
 		return $this->db->get_where('penjualan', ['id_barang' => $id_barang])->row_array();
 	}
+
+	public function find($id)
+  {
+    $result = $this->db->where('id_barang', $id)
+                      ->limit(1)
+                      ->get('penjualan');
+    if($result->num_rows() > 0){
+      return $result->row();
+    }else{
+      return array();
+    }
+  }
   
->>>>>>> 43d545fde43f9bf007db603027e8c0b5c3ab48f7
+//>>>>>>> 43d545fde43f9bf007db603027e8c0b5c3ab48f7
 }

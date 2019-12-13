@@ -42,8 +42,17 @@
             
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav ml-auto py-4 py-md-0">
+              <div class="navbar">
+                  <ul class="nav navbar-nav navbar-left">
+                    <li>
+                      <?php
+                        $cart = 'Shopping Cart: '.$this->cart->total_items(). ' items '?>
+                      <?php echo anchor('cart/detail_cart', $cart)  ?>
+                    </li>
+                  </ul>
+                </div>
+                <!-- search -->
                 <li>
-                  <!-- search -->
                   <form  action="" method="post">
                     <input type="text" class="form-control" placeholder="Cari Data Barang" name="keyword">
                   </form>
@@ -62,6 +71,8 @@
                   <a class="nav-link" href="<?= base_url("auth");?>">Login</a>
                 </li>
                 
+                
+
               </ul>
             </div>
             
