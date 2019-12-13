@@ -1,4 +1,5 @@
 <div class="container-fluid">
+  <div class="row my-4">
 
            <div class="row text-center my-4">
                   <?php foreach ($barang as $key) : ?>
