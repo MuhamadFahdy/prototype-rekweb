@@ -48,18 +48,34 @@ class Cart extends CI_Controller
     public function pay()
     {
     	$data['title'] = 'Pay Page';
-    	$this->load->view('templates/header',$data);
-		$this->load->view('cart/pay');
-		$this->load->view('templates/footer');
+    	// $this->load->view('templates/header',$data);
+		// $this->load->view('cart/pay');
+		// $this->load->view('templates/footer');
+
+		$this->form_validation->set_rules('name', 'Name', 'required');
+        $this->form_validation->set_rules('address', 'Address', 'required');
+        $this->form_validation->set_rules('phonenum', 'Phone Number', 'required|numeric');
+
+        if( $this->form_validation->run() == FALSE ) {
+            $this->load->view('templates/header', $data);
+            $this->load->view('cart/pay');
+            $this->load->view('templates/footer');
+        } else {
+			$this->Barang_Model->addDataPembeli();
+            $this->session->set_flashdata('flash', 'Made');
+            redirect('home/index');
+		}
+		
+		
     }
 
-    public function order_process()
-    {
-    	$this->cart->destroy();
-    	$this->load->view('templates/header');
-		$this->load->view('cart/process');
-		$this->load->view('templates/footer');
-	}
+    // public function order_process()
+    // {
+    // 	$this->cart->destroy();
+    // 	$this->load->view('templates/header');
+	// 	$this->load->view('cart/process');
+	// 	$this->load->view('templates/footer');
+	// }
 	
 
 		

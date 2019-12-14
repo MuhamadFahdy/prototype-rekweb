@@ -1,4 +1,8 @@
 <div class="container-fluid">
+<div class="flash-data" data-flashdata="<?= $this->session->flashdata('flash'); ?>"></div>
+    <?php if( $this->session->flashdata('flash') ) : ?>
+    
+    <?php endif; ?>
     <div class="row mt-4">
         <h4>Shopping Cart</h4>
 
@@ -40,7 +44,7 @@
         <div align="right">
             <a href="<?= base_url('shop/index') ?>"><button class="btn btn-sm btn-dark mb-3">Continue Shopping</button></a>
 
-            <a href="<?= base_url('cart/delete_cart') ?>"><button class="btn btn-sm btn-danger mb-3">Delete Cart</button></a>
+            <a href="<?= base_url('cart/delete_cart') ?>"><button class="btn btn-sm btn-danger mb-3 tombol-hapus">Delete Cart</button></a>
             
             <a href="<?= base_url('cart/pay') ?>"><button class="btn btn-sm btn-primary mb-3">Pay Now!</button></a>
 

@@ -60,8 +60,21 @@ class Barang_Model extends CI_Model {
       return $result->row();
     }else{
       return array();
-    }
+	}
   }
+
+  	public function addDataPembeli()
+	{
+	$data = [
+		"name" =>$this->input->post('name', true),
+		"address" =>$this->input->post('address', true),
+		"phonenum" =>$this->input->post('phonenum', true),
+		"ship" =>$this->input->post('ship', true),
+		"bank" =>$this->input->post('bank', true)
+	];
+
+	$this->db->insert('pembeli', $data);
+    }
   
 //>>>>>>> 43d545fde43f9bf007db603027e8c0b5c3ab48f7
 }

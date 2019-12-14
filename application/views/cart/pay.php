@@ -14,53 +14,60 @@
 
 				echo "<h6>TOTAL: ".number_format($grand_total, 0,',',',');
 				?>
-			</div><br><br>
+			</div><br>
 
-			<h3>Input Alamat Pengiriman dan Pembayaran</h3>
+			<div class="card">
+                <div class="card-header">
+				Input Alamat Pengiriman dan Pembayaran
+				</div>
 
-
-			<form method="post" action="<?= base_url() ?> cart/order_process">
+			<div class="card-body">
+			<form action="" method="post">
 
 					<div class="form-group">
-						<label>Full Name</label>
-						<input type="text" name="name" placeholder="Your Full Name" class="form-control">
+						<label for="name">Full Name</label>
+						<input type="text" name="name"  class="form-control" id="name">
+						<small class="form-text text-danger"><?= form_error('name'); ?></small>
 					</div>
 
 					<div class="form-group">
-						<label>Full Address</label>
-						<input type="text" name="address" placeholder="Your Full Address" class="form-control">
+						<label for="address">Full Address</label>
+						<input type="text" name="address" placeholder="Your Full Address" class="form-control" id="address">
+						<small class="form-text text-danger"><?= form_error('address'); ?></small>
 					</div>
 
 					<div class="form-group">
-						<label>Phone Number</label>
-						<input type="text" name="phone" placeholder="Your Phone Number" class="form-control">
+						<label for="phonenum">Phone Number</label>
+						<input type="text" name="phonenum" class="form-control" id="phonenum">
+						<small class="form-text text-danger"><?= form_error('phonenum'); ?></small>
 					</div>
 
 					<div class="form-group">
-						<label>Shipping Options</label>
-						<select class="form-control">
-							<option>POS INDONESIA</option>
-							<option>FEDEX</option>
-							<option>JNE</option>
-							<option>GOJEK</option>
-							<option>GRAB</option>
+						<label for="ship">Shipping Options</label>
+						<select class="form-control" id="ship" name="ship">
+							<option value="POS INDONESIA">POS INDONESIA</option>
+							<option value="FEDEX">FEDEX</option>
+							<option value="JNE">JNE</option>
+							<option value="GOJEK">GOJEK</option>
+							<option value="GRAB">GRAB</option>
 						</select>
 					</div>
 
 					<div class="form-group">
-						<label>Bank Options</label>
-						<select class="form-control">
-							<option>Bank Maybank Indonesia</option>
-							<option>Bank Mandiri</option>
-							<option>Bank Negara Indonesia (BNI)</option>
-							<option>Bank CIMB Niaga</option>
-							<option>Bank Rakyat Indonesia (BRI)</option>
-							<option>Bank OCBC NISP</option>
+						<label for="bank">Bank Options</label>
+						<select class="form-control" id="bank" name="bank">
+							<option value="Bank Maybank Indonesia">Bank Maybank Indonesia</option>
+							<option value="Bank Mandiri">Bank Mandiri</option>
+							<option value="Bank Negara Indonesia (BNI)">Bank Negara Indonesia (BNI)</option>
+							<option VALUE="Bank CIMB Niaga">Bank CIMB Niaga</option>
+							<option value="Bank Rakyat Indonesia (BRI)">Bank Rakyat Indonesia (BRI)</option>
+							<option value="Bank OCBC NISP">Bank OCBC NISP</option>
 						</select>
 					</div>
 
-					<button type="submit" class="btn btn-sm btn-dark mb-3">Order!</button>
+					<button type="submit" name="add" class="btn btn-sm btn-primary float-left">Order Now!</button>
 			</form>
+			</div>
 			<?php 
 		} else
 			{
