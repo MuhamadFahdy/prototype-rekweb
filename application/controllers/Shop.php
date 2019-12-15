@@ -12,7 +12,6 @@ class Shop extends CI_Controller
 
         $this->load->view('templates/header',$data);
         $this->load->view('shop/index', $data);
-        $this->load->view('sidebar', $data);
         $this->load->view('templates/footer');
 		}
 
