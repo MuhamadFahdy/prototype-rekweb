@@ -3,7 +3,7 @@
       <div class="row">
         <div class=" col-6">
           <br>
-          <h3>Form Tambah Mahasiswa</h3>
+          <h3>Form Add Products</h3>
           <form method="post" action="<?= base_url()?>Admin/tambahkan" enctype="multipart/form-data">
               <div class="form-group">
                 <label for="nama_barang">nama_barang</label>
