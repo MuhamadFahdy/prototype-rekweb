@@ -5,6 +5,9 @@
 <!-- 
             <a href="<?= base_url('admin/tambah')?>" class="btn btn-dark col-lg-3 mb-3" data-toggle="modal" data-target="#tambah"><i class="fas fa-plus fa-sm"></i> Add Product</a>
  -->
+                  <form  action="" method="post">
+                    <input type="text" class="form-control" placeholder="Cari Data Barang" name="keyword">
+                  </form>
 
             <a href="<?= base_url('admin/tambah')?>" class="btn btn-dark col-lg-3 mb-3"><i class="fas fa-plus fa-sm"></i> Add Product</a>
             <table class="table table-striped table-bordered">
@@ -47,7 +50,14 @@
                 </table>
             </div>
         </div>
+        <?php if(empty($barang) ) : ?>
+            <div class="alert alert-danger" role="alert">
+            Data Barang Tidak ditemukan
+            </div>
+        <?php endif; ?>
     </div>
+
+
 <!-- 
         <div class="modal fade" id="tambah" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
           <div class="modal-dialog" role="document">

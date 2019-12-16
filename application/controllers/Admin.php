@@ -7,11 +7,9 @@ class Admin extends CI_Controller
 		$data['user'] = $this->db->get('user')->row_array();
 		$this->load->model('Barang_Model');
 		$data['barang'] = $this->Barang_Model->getAllBarang();
-
 		if( $this->input->post('keyword')) {
         $data['barang'] = $this->Barang_Model->cariDataBarang();
           }
-
 		$data['title'] = 'Login Page';
         $this->load->view('adminTemplate/header',$data);
         $this->load->view('admin/index', $data);

@@ -41,8 +41,6 @@ class Barang_Model extends CI_Model {
 		{
 			$keyword = $this->input->post('keyword',true);
 			$this->db->like('nama_barang', $keyword);
-			$this->db->or_like('deskripsi_barang',$keyword);
-			$this->db->or_like('harga_barang',$keyword);
 			return $this->db->get('penjualan')->result_array();
 		}	
 //=======

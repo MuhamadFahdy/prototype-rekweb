@@ -1,11 +1,14 @@
 <div class="container-fluid">
 <div class="flash-data" data-flashdata="<?= $this->session->flashdata('flash'); ?>"></div>
-    <?php if( $this->session->flashdata('flash') ) : ?>
-    
-    <?php endif; ?>
+
+<br>
+<br>    
     <div class="row mt-4">
         <h4>Shopping Cart</h4>
 
+                 <!--  <form  action="" method="post">
+                    <input type="text" class="form-control" placeholder="Cari Data Barang" name="keyword">
+                  </form> -->
         
         <table class="table table-borded table-stripes table-hover">
         <thead class="thead-dark text-center">
@@ -17,7 +20,8 @@
                 <th>Sub-Total</th>
                 <th>Action</th>
             </tr>
-        
+
+                  <!-- end search  -->
             <?php 
             $no=1;
             foreach ($this->cart->contents() as $barang) : ?>
@@ -51,9 +55,6 @@
         </div>
         </div>
         </div>
-        
-
-
         
     </div>
 </div>

@@ -52,12 +52,9 @@
                   </ul>
                 </div>
                 <!-- search -->
-                <li>
-                  <form  action="" method="post">
+        <form  action="" method="post">
                     <input type="text" class="form-control" placeholder="Cari Data Barang" name="keyword">
                   </form>
-                  <!-- end search  -->
-                </li>
                 <li class="nav-item  ml-md-4 active">
                   <a class="nav-link" href="<?= base_url("");?>" role="button" aria-haspopup="true" aria-expanded="false">Home</a>
                 </li>

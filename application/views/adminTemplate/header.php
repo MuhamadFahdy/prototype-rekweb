@@ -38,6 +38,7 @@
           <i class="fas fa-user-circle fa-fw"></i>
         </a>
        <li>
+        
         <a class="btn btn-primary" href="<?= base_url('home/index');?>">Logout</a>
       </li>
       </li>
