@@ -2,10 +2,12 @@
         <div class="row">
             <div class="col-12">
                 <h3 class="mt-3">Product List</h3>
-
+<!-- 
             <a href="<?= base_url('admin/tambah')?>" class="btn btn-dark col-lg-3 mb-3" data-toggle="modal" data-target="#tambah"><i class="fas fa-plus fa-sm"></i> Add Product</a>
+ -->
 
-                <table class="table table-striped table-bordered">
+            <a href="<?= base_url('admin/tambah')?>" class="btn btn-dark col-lg-3 mb-3"><i class="fas fa-plus fa-sm"></i> Add Product</a>
+            <table class="table table-striped table-bordered">
                     <thead class="thead-dark">
                         <tr>
                         <th scope="col" style="text-align:center">No.</th>
@@ -35,9 +37,9 @@
                        
                         <td><a href="<?= base_url('admin/tambah')?>" class="btn btn-success btn-sm"><i class="fas fa-search-plus"></i></div></td>
 
-                        <td><a href="<?= base_url('admin/ubah')?>" class="btn btn-primary btn-sm"><i class="fas fa-edit"></i></div></td>
+                        <td><a href="<?= base_url('admin/ubah/')?><?= $key['id_barang'] ?>" class="btn btn-primary btn-sm"><i class="fas fa-edit"></i></div></td>
 
-                        <td><a href="<?= base_url('admin/hapus')?>" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i></div></td>
+                        <td><a href="<?= base_url('admin/hapus/')?><?= $key['id_barang'] ?>" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i></div></td>
                         </tr>
 
                      <?php endforeach ?>
@@ -46,8 +48,7 @@
             </div>
         </div>
     </div>
-
-       <!-- Modal -->
+<!-- 
         <div class="modal fade" id="tambah" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
           <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -59,7 +60,7 @@
               </div>
 
               <div class="modal-body">
-                <form action="<= base_url(). 'admin/tambah'; ?>" method="post" enctype="multipart/form-data">
+                <form action="<php base_url('admin/tambah') ?>" method="post" enctype="multipart/form-data">
                     
                 <div class="form-group">
                 <label for="nama_barang">Product Name</label>
@@ -82,7 +83,7 @@
                 <small><?= form_error('brand_barang') ?></small>
                 <br>
 
-                <label for="category_barang">Product Brand</label>
+                <label for="category_barang">Category Brand</label>
                 <input type="text" class="form-control" id="category_barang" name="category_barang">
                 <small><?= form_error('category_barang') ?></small>
                 <br>
@@ -101,11 +102,11 @@
                     </form>
                 </br>
               </div>
-              
               <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
+                <a href="<?= base_url('admin/tambah') ?>" class="btn btn-primary" >Save changes</a>
               </div>
             </div>
           </div>
         </div>
+ -->              

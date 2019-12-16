@@ -5,8 +5,8 @@ class Barang_Model extends CI_Model {
 		return $this->db->get('penjualan')->result_array();
 	}
 
-	public function getBarangById($id){
-		return $this->db->get_where('penjualan', ['id'=> $id])->row_array();
+	public function getBarangById($id_barang){
+		return $this->db->get_where('penjualan', ['id_barang'=> $id_barang])->row_array();
 	}
 
 	public function ubahBarang(){
@@ -17,7 +17,7 @@ class Barang_Model extends CI_Model {
 		"brand_barang" => $this->input->post('brand_barang', true),
 		"img_barang" => $this->input->post('img_barang', true)
 		];
-		$this->db->where('id', $this->input->post('id'));
+		$this->db->where('id_barang', $this->input->post('id_barang'));
 		$this->db->update('penjualan', $data);
 	}
   
