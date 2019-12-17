@@ -41,8 +41,7 @@ class Cart extends CI_Controller
 
 	public function delete_cart()
     {
-		$this->cart->destroy();
-        redirect('shop/index');
+		
     }
 
     public function pay()

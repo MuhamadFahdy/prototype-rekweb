@@ -9,8 +9,9 @@
                     <input type="text" class="form-control" placeholder="Cari Data Barang" name="keyword">
                   </form>
 
-            <a href="<?= base_url('admin/tambah')?>" class="btn btn-dark col-lg-3 mb-3"><i class="fas fa-plus fa-sm"></i> Add Product</a>
-            <table class="table table-striped table-bordered">
+                <a href="<?= base_url('admin/tambah')?>" class="btn btn-dark col-lg-3 mb-3"><i class="fas fa-plus fa-sm"></i> Add Product</a>
+                 <a href="<?= base_url('admin/order')?>" class="btn btn-dark col-lg-3 mb-3"><i class=""></i> lihat orderan</a>
+                <table class="table table-striped table-bordered">
                     <thead class="thead-dark">
                         <tr>
                         <th scope="col" style="text-align:center">No.</th>

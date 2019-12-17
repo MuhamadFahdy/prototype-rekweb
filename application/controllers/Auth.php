@@ -27,6 +27,7 @@ class Auth extends CI_Controller
 
     private function _login()
     {
+        
         $email = $this->input->post('email');
         $password = $this->input->post('password');
 
@@ -84,7 +85,7 @@ class Auth extends CI_Controller
 
 
         if($this->form_validation->run() == false){
-        $data['title'] = 'WPU User Registrasi';
+        $data['title'] = 'User Registrasi';
         $this->load->view('templates/header', $data);
         $this->load->view('auth/registration');
         $this->load->view('templates/footer');

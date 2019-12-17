@@ -25,7 +25,6 @@
 
 </head>
 
- -->
 <body class="hero-anime"> 
 
   <div class="navigation-wrap bg-light start-header start-style">

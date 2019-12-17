@@ -8,7 +8,7 @@
 
     <div class="row">
       <div class="col-md-4">
-        <img src="<?= base_url('assets/')?>img/<?= $barang['img_barang']?>.jpg" class="card-img">
+        <img src="<?= base_url('assets/')?>img/<?= $barang['img_barang']?>" class="card-img">
       </div>
 
       <div class="col-md-8"> 

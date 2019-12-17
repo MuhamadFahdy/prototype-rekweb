@@ -140,7 +140,15 @@ class Admin extends CI_Controller
       redirect('admin');
     }
 
-
+    public function order(){
+    	$data['user'] = $this->db->get('user')->row_array();
+		$this->load->model('Barang_Model');
+		$data['pembeli'] = $this->Barang_Model->getAllPembeli();
+		
+		$this->load->view('adminTemplate/header',$data);
+        $this->load->view('admin/order', $data);
+        $this->load->view('adminTemplate/footer');
+    }
 
 
 
