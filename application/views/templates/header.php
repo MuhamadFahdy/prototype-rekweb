@@ -84,6 +84,9 @@
                 <li class="nav-item  ml-md-4">
                   <a class="nav-link" href="<?= base_url("auth");?>">Login</a>
                 </li>
+                <li class="nav-item  ml-md-4">
+                  <a class="nav-link" href="<?= base_url("about");?>">About</a>
+                </li>
                 
               </ul>
             </div>
