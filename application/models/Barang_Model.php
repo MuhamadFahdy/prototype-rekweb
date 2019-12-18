@@ -5,8 +5,12 @@ class Barang_Model extends CI_Model {
 		return $this->db->get('penjualan')->result_array();
 	}
 
-	public function getBarangById($id){
-		return $this->db->get_where('penjualan', ['id'=> $id])->row_array();
+	public function getAllPembeli(){
+		return $this->db->get('pembeli')->result_array();
+	}
+
+	public function getBarangById($id_barang){
+		return $this->db->get_where('penjualan', ['id_barang'=> $id_barang])->row_array();
 	}
 
 	public function ubahBarang(){
@@ -17,7 +21,7 @@ class Barang_Model extends CI_Model {
 		"brand_barang" => $this->input->post('brand_barang', true),
 		"img_barang" => $this->input->post('img_barang', true)
 		];
-		$this->db->where('id', $this->input->post('id'));
+		$this->db->where('id_barang', $this->input->post('id_barang'));
 		$this->db->update('penjualan', $data);
 	}
   
@@ -41,10 +45,14 @@ class Barang_Model extends CI_Model {
 		{
 			$keyword = $this->input->post('keyword',true);
 			$this->db->like('nama_barang', $keyword);
-			$this->db->or_like('deskripsi_barang',$keyword);
-			$this->db->or_like('harga_barang',$keyword);
 			return $this->db->get('penjualan')->result_array();
-		}	
+		}
+
+	public function order(){
+			$keyword = $this->input->post('keyword',true);
+			$this->db->like('name', $keyword);
+			return $this->db->get('pembelian')->result_array();
+	}	
 //=======
 	public function getBarangID($id_barang)
 	{

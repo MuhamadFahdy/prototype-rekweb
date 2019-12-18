@@ -27,7 +27,7 @@
 
   <nav class="navbar navbar-expand navbar-dark bg-dark static-top">
 
-    <a class="navbar-brand mr-1" href="index.html">Start Bootstrap</a>
+    <a class="navbar-brand mr-1" href="index.html">Admin Corner</a>
 
         <!-- Navbar -->
     <ul class="navbar-nav ml-auto mr-0 mr-md-3 my-2 my-md-0">
@@ -38,6 +38,7 @@
           <i class="fas fa-user-circle fa-fw"></i>
         </a>
        <li>
+        
         <a class="btn btn-primary" href="<?= base_url('home/index');?>">Logout</a>
       </li>
       </li>

@@ -4,9 +4,9 @@
            <div class="row text-center my-4">
                   <?php foreach ($barang as $key) : ?>
 
-                <div class="card ml-3 my-3 border-dark" style="width: 15rem;">
+                <div class="card ml-5 my-4 border-dark" style="width: 15rem;">
 
-                <img src="<?= base_url('assets/')?>img/<?= $key['img_barang']?>.jpg" class="card-img-top" alt="logo" width="200">
+                <img src="<?= base_url('assets/')?>img/<?= $key['img_barang']?>" class="card-img-top" alt="logo" width="200">
 
                 <div class="card-body">
                   <h4 class="card-title"><?= $key['nama_barang'] ?></h4>
@@ -26,3 +26,11 @@
                   <?php endforeach ?>
               </div>
          </div>
+
+      </h4>
+    </li>
+  </ul>
+</div>
+</div>
+</div>
+</div>
