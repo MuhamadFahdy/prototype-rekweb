@@ -33,7 +33,7 @@
         <div class="col-12">
           <nav class="navbar navbar-expand-md navbar-light">
           
-            <a class="navbar-brand" href="https://themeforest.net/user/ig_design/portfolio" target="_blank"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1462889/logo.svg" alt=""></a>  
+            <a class="navbar-brand" href="<?= base_url("");?>" role="button" aria-haspopup="true" aria-expanded="false"><img src="<?= base_url('assets/')?>img/techo.png"></a>  
             
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
@@ -51,12 +51,9 @@
                   </ul>
                 </div>
                 <!-- search -->
-        <form  action="" method="post">
+                  <form  action="" method="post">
                     <input type="text" class="form-control" placeholder="Cari Data Barang" name="keyword">
                   </form>
-                <li class="nav-item  ml-md-4 active">
-                  <a class="nav-link" href="<?= base_url("");?>" role="button" aria-haspopup="true" aria-expanded="false">Home</a>
-                </li>
 
                 <li class="nav-item  ml-md-4">
                   <a class="nav-link" href="<?= base_url("shop");?>">Shop</a>
