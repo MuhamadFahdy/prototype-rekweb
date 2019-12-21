@@ -1,14 +1,7 @@
-
-  <section id="intro">
-    <div class="intro-content">
-      <h2>Welcome to Vlava!</h2>
-      <h3>Lorem ipsum dolor sit amet, elit persecuti efficiendi</h3>
-      <div>
-        <a href="#section-services" class="btn-get-started scrollto">Get Started</a>
-      </div>
-    </div>
-  </section>
-
+<br>
+<br>
+<br>
+<br>
 
 <div class="container-fluid">
   <div class="row">
@@ -27,7 +20,9 @@
                   </div>
 
                 <div class="card-body">
-                  <a href="<?= base_url('auth')?>" class="btn btn-sm btn-light" type="submit">Buy</a>
+                  <?php echo anchor ('cart/add_to_cart/'.$key['id_barang'],'<div class="btn btn-sm btn-dark">Add to Cart</div>') ?>
+                  
+                  <a href="<?= base_url(); ?>shop/details/<?= $key['id_barang'] ?>" class="btn btn-sm btn-light" type="submit">Details</a>
                 </div> 
               </div>
                   <?php endforeach ?>

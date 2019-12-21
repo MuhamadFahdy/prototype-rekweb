@@ -1,3 +1,6 @@
+<br>
+<br>
+
 <div class="container-fluid">
 	<div class="row mt-5">
 		<div class="col-md-2" align="right"></div>
@@ -79,3 +82,6 @@
 		<div class="col-md-2"></div>
 	</div>	
 </div>
+</div>
+
+<br>

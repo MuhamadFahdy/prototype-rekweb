@@ -13,9 +13,9 @@ class Cart extends CI_Controller
 	{
 		$data['barang'] = $this->Barang_Model->getAllBarang();
 		$data['title'] = 'Cart Page';
-        $this->load->view('templates/header',$data);
+        $this->load->view('templates/user_header',$data);
         $this->load->view('cart/index', $data);
-        $this->load->view('templates/footer');
+        $this->load->view('templates/user_footer');
 	}
 
 	public function add_to_cart($id)
@@ -28,20 +28,19 @@ class Cart extends CI_Controller
 		'qty' => 1,
 		);
 		$this->cart->insert($data);
-		redirect('shop');
+		redirect('user');
 	}
 
 	public function detail_cart()
 	{
 		$data['title'] = 'Cart Page';
-		$this->load->view('templates/header',$data);
+		$this->load->view('templates/user_header',$data);
 		$this->load->view('cart/index');
-		$this->load->view('templates/footer');
+		$this->load->view('templates/user_footer');
 	}
 
 	public function delete_cart()
     {
-		
     }
 
     public function pay()
@@ -56,9 +55,9 @@ class Cart extends CI_Controller
         $this->form_validation->set_rules('phonenum', 'Phone Number', 'required|numeric');
 
         if( $this->form_validation->run() == FALSE ) {
-            $this->load->view('templates/header', $data);
+            $this->load->view('templates/user_header', $data);
             $this->load->view('cart/pay');
-            $this->load->view('templates/footer');
+            $this->load->view('templates/user_footer');
         } else {
 			$this->Barang_Model->addDataPembeli();
             $this->session->set_flashdata('flash', 'Made');

@@ -13,64 +13,51 @@ class Auth extends CI_Controller
     {
         $this->form_validation->set_rules('email','Email','trim|required|valid_email');
         $this->form_validation->set_rules('password','Password','trim|required');
-
         if($this->form_validation->run() == false){
         $data['title'] = 'Login Page';
-        $this->load->view('templates/header');
+        $this->load->view('templates/auth_header',$data);
         $this->load->view('auth/login');
-        $this->load->view('templates/footer');
+        $this->load->view('templates/auth_footer');
         } else {
             //validasinya success
             $this->_login();
         }
     }
-
-    private function _login()
-    {
-        
+ private function _login(){
         $email = $this->input->post('email');
         $password = $this->input->post('password');
-
-        $user = $this->db->get_where('user',['email'=>$email])->row_array();
-
-        if($user)
-        {
-            //usernya ada
-            if($user['is_active'] == 1)
-            {
-                
-                //jika usernya aktif
-                if(password_verify($password, $user['password']))
-                {
-                    $data = [
-                        'email' => $user['email'],
-                        'role_id' => $user['role_id']
-                    ];
-                    $this->session->set_userdata($data);
+        $user= $this->db->get_where('user', ['email' => $email])->row_array();
+        if ($user) {
+            if($user['is_active']== 1){
+            if(password_verify($password, $user['password'])){
+                $data = [
+                    'email' => $user['email'],
+                    'role_id' => $user['role_id']
+                ];
+                $this->session->set_userdata($data);
+                if ($user['role_id'] == 1) {
                     redirect('admin');
-                } else 
-                {
-                    $this->session->set_flashdata('message','<div class="alert alert-danger" role="alert">Wrong password!</div>');
-                    redirect('auth');
+                }else{
+                    redirect('user');
                 }
-             } else
-            {
-                $this->session->set_flashdata('message','<div class="alert alert-danger" role="alert">This email has not activated!</div>');
+            } else{
+                $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">Wrong Password !</div>');
                 redirect('auth');
             }
-        } else
-        {
-            $this->session->set_flashdata('message','<div class="alert alert-danger" role="alert">Email is not registered!</div>');
-            redirect('auth');
+        }else{
+                $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">User not Activated, Check your MailBox !</div>');
+                redirect('auth');
+            }
+        }else{
+            $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">Email not Registered ! </div>');
+                redirect('auth');
         }
     }
-
     public function logout()
     {
-        $this->session->unset_userdata('email');
-        $this->session->unset_userdata('role_id');
-
-        $this->session->set_falshdata('message','<div class="alert alert-success" role="alert">You have been out!</div>');
+        // $this->session->unset_userdata('email');
+        // $this->session->unset_userdata('role_id');
+        // $this->session->set_falshdata('message','<div class="alert alert-success" role="alert">You have been out!</div>');
         redirect('auth');
     }
 

@@ -32,25 +32,36 @@
         <div class="col-12">
           <nav class="navbar navbar-expand-md navbar-light">
           
-            <a class="navbar-brand" href="<?= base_url('');?>" role="button" aria-haspopup="true" aria-expanded="false"><img src="<?= base_url('assets/')?>img/techo.png"></a>  
+            <a class="navbar-brand" href="<?= base_url("");?>" role="button" aria-haspopup="true" aria-expanded="false"><img src="<?= base_url('assets/')?>img/techo.png"></a>  
             
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
             
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ml-auto py-4 py-md-0">
+              <div class="navbar">
+                  <ul class="nav navbar-nav navbar-left">
+                    <li>
+                      <?php
+                        $cart = 'Shopping Cart: '.$this->cart->total_items(). ' items '?>
+                      <?php echo anchor('cart/detail_cart', $cart)  ?>
+                    </li>
+                  </ul>
                 </div>
+
+
+
                 <li class="nav-item  ml-md-4">
-                  <a class="nav-link" href="<?= base_url('home');?>">Home</a>
+                  <a class="nav-link" href="<?= base_url('user');?>">Shop</a>
                 </li>
+
                 <li class="nav-item  ml-md-4">
-                  <a class="nav-link" href="<?= base_url('home/shop');?>">Shop</a>
+                  <a class="nav-link" href="<?= base_url('cart');?>">Cart</a>
                 </li>
+
                 <li class="nav-item  ml-md-4">
-                  <a class="nav-link" href="<?= base_url('auth');?>">Login</a>
-                </li>
-                <li class="nav-item  ml-md-4">
-                  <a class="nav-link" href="<?= base_url('home/about');?>">About</a>
+                  <a class="btn btn-danger" href="<?= base_url('auth/logout   ');?>">Logout</a>
                 </li>
                 
               </ul>
@@ -62,3 +73,4 @@
     </div>
   </div>
   
+

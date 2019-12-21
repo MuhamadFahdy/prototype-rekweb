@@ -11,9 +11,9 @@ class Admin extends CI_Controller
         $data['barang'] = $this->Barang_Model->cariDataBarang();
           }
 		$data['title'] = 'Login Page';
-        $this->load->view('adminTemplate/header',$data);
+        $this->load->view('templates/admin_header',$data);
         $this->load->view('admin/index', $data);
-        $this->load->view('adminTemplate/footer');
+        $this->load->view('templates/admin_footer');
 		}
 
 
@@ -21,9 +21,9 @@ class Admin extends CI_Controller
 		$this->load->library('upload');
 		$data['user'] = $this->db->get('user')->row_array();
 		$data['title'] = 'Form Ubah Data Barang';
-		$this->load->view('adminTemplate/header', $data);
+		$this->load->view('templates/admin_header', $data);
 		return $this->load->view('admin/tambah');
-		$this->load->view('adminTemplate/footer');
+		$this->load->view('templates/admin_footer');
 	}
 
 	public function tambahkan(){
@@ -36,9 +36,9 @@ class Admin extends CI_Controller
 		if ($this->form_validation->run() == FALSE) {
 			$data['user'] = $this->db->get('user')->row_array();
 			$data['title'] = 'Form Ubah Data Barang';
-			$this->load->view('adminTemplate/header', $data);
+			$this->load->view('templates/admin_header', $data);
 			return $this->load->view('admin/tambah');
-			$this->load->view('adminTemplate/footer');
+			$this->load->view('templates/admin_footer');
 		} else {
 
 		$nama_barang = $this->input->post('nama_barang');
@@ -86,9 +86,9 @@ class Admin extends CI_Controller
 		$this->form_validation->set_rules('deskripsi_barang', 'deskripsi_barang', 'required');
 		$this->form_validation->set_rules('harga_barang', 'harga_barang', 'required');
 		if ($this->form_validation->run() == FALSE) {
-			$this->load->view('adminTemplate/header', $data);
+			$this->load->view('templates/admin_header', $data);
 			$this->load->view('admin/ubah');
-			$this->load->view('adminTemplate/footer');
+			$this->load->view('templates/admin_footer');
 		} else {
 		$nama_barang = $this->input->post('nama_barang');
 		$deskripsi_barang = $this->input->post('deskripsi_barang');
@@ -145,9 +145,9 @@ class Admin extends CI_Controller
 		$this->load->model('Barang_Model');
 		$data['pembeli'] = $this->Barang_Model->getAllPembeli();
 		
-		$this->load->view('adminTemplate/header',$data);
+		$this->load->view('templates/admin_header',$data);
         $this->load->view('admin/order', $data);
-        $this->load->view('adminTemplate/footer');
+        $this->load->view('templates/admin_footer');
     }
 
 

@@ -32,7 +32,11 @@
                     <td><?php echo $barang['qty'] ?></td>
                     <td>Rp. <?php echo number_format($barang['price'],  0,',',',')  ?></td>
                     <td>Rp. <?php echo number_format($barang['subtotal'], 0,',',',') ?></td>
-                    <td><div class="btn btn-danger btn-sm"><i class="fas fa-trash"></i></div></td>
+                    <td>
+                        <a href="<?= base_url('') ?>">
+                            <div class="btn btn-danger btn-sm"><i class="fas fa-trash"></i></div>
+                    </a>
+                    </td>
                 </tr>
             <?php endforeach; ?>
 
@@ -46,10 +50,6 @@
         <div class="container">
         <div class="row ml-5">
         <div align="right">
-            <a href="<?= base_url('shop/index') ?>"><button class="btn btn-sm btn-dark mb-3">Continue Shopping</button></a>
-
-            <a href="<?= base_url('cart/delete_cart') ?>"><button class="btn btn-sm btn-danger mb-3 tombol-hapus">Delete Cart</button></a>
-            
             <a href="<?= base_url('cart/pay') ?>"><button class="btn btn-sm btn-primary mb-3">Pay Now!</button></a>
 
         </div>
