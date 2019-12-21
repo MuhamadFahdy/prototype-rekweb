@@ -32,7 +32,7 @@
         <div class="col-12">
           <nav class="navbar navbar-expand-md navbar-light">
           
-            <a class="navbar-brand" href="<?= base_url("");?>" role="button" aria-haspopup="true" aria-expanded="false"><img src="<?= base_url('assets/')?>img/techo.png"></a>  
+            <a class="navbar-brand" href="<?= base_url("user");?>" role="button" aria-haspopup="true" aria-expanded="false"><img src="<?= base_url('assets/')?>img/techo.png"></a>  
             
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>

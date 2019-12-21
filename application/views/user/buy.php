@@ -5,27 +5,14 @@
 	<div class="row mt-5">
 		<div class="col-md-2" align="right"></div>
 		<div class="col-md-8">
-			<div class="btn btn-sm btn-success mt-4">
-				<?php
-				$grand_total = 0;
-				if ($cart = $this->cart->contents()) 
-				{
-					foreach ($cart as $barang)
-					{
-						$grand_total = $grand_total + $barang['subtotal'];
-					}
-
-				echo "<h6>TOTAL: ".number_format($grand_total, 0,',',',');
-				?>
-			</div><br>
-
 			<div class="card">
                 <div class="card-header">
 				Input Alamat Pengiriman dan Pembayaran
 				</div>
 
 			<div class="card-body">
-			<form action="" method="post">
+			<form action="<?= base_url('user/belisatu') ?>" method="post">
+					<input type="hidden" name="nama_produk" value="<?= $aaa['nama_barang']; ?>">
 					<div class="form-group">
 						<label for="name">Full Name</label>
 						<input type="text" name="name"  class="form-control" id="name">
@@ -67,15 +54,9 @@
 						</select>
 					</div>
 
-					<button type="submit" name="add" class="btn btn-sm btn-primary float-left">Order Now!</button>
+					<button type="submit" name="belisatu" class="btn btn-sm btn-primary float-left">Order Now!</button>
 			</form>
 			</div>
-			<?php 
-		} else
-			{
-				echo "<h4>You have no item in your cart";
-			}
-				?>
 		</div>
 
 		<div class="col-md-2"></div>

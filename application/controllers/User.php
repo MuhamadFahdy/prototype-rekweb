@@ -26,6 +26,41 @@ class User extends CI_Controller{
         $this->load->view('templates/footer');
     }    
 
+    public function buy($prod_id)
+        {
+        $this->load->model('Barang_Model');
+        $data['aaa'] = $this->Barang_Model->getBarangID($prod_id);
+        $data['title'] = 'Details Page';
+        $this->load->view('templates/header', $data);
+        $this->load->view('user/buy', $data);
+        $this->load->view('templates/footer');
+    }   
+
+    public function belisatu()
+    {
+     $name =   $this->input->post('name');
+     $address =   $this->input->post('address');
+     $phonenum =   $this->input->post('phonenum');
+     $ship =   $this->input->post('ship');
+     $bank =   $this->input->post('bank');
+     $nama_produk = $this->input->post('nama_produk');
+        
+    $data = [
+        'name' => $name,
+        'address' => $address,
+        'phonenum' => $phonenum,
+        'ship' => $ship,
+        'bank' => $bank,
+        'nama_produk' => $nama_produk,
+    ];
+
+    $this->db->insert('pembeli', $data);
+
+    redirect('user');
+
+    }    
+ 
+
     public function edit(){
         $data['title'] = 'Edit Profile';
         $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();

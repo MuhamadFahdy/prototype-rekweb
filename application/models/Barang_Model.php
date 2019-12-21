@@ -78,7 +78,7 @@ class Barang_Model extends CI_Model {
 		"address" =>$this->input->post('address', true),
 		"phonenum" =>$this->input->post('phonenum', true),
 		"ship" =>$this->input->post('ship', true),
-		"bank" =>$this->input->post('bank', true)
+		"bank" =>$this->input->post('bank', true),
 	];
 
 	$this->db->insert('pembeli', $data);

@@ -15,6 +15,7 @@
                         <th scope="col" style="text-align:center">phonenum</th>
                         <th scope="col" style="text-align:center">ship</th>
                         <th scope="col" style="text-align:center">bank</th>
+                        <th scope="col" style="text-align:center">Name Product</th>
                         </tr>
                     </thead>
 
@@ -30,6 +31,7 @@
                         <td><?= $key['phonenum'] ?></td>
                         <td><?= $key['ship'] ?></td>
                         <td><?= $key['bank'] ?></td>
+                        <td><?= $key['nama_produk'] ?></td>
                      <?php endforeach ?>
                     </tbody>
                 </table>
