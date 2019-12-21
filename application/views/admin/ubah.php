@@ -16,11 +16,11 @@
                 <small><?= form_error('deskripsi_barang') ?></small>
 
                 <label for="brand_barang">brand_barang</label>
-                <input type="text" class="form-control" id="brand_barang" name="brand_barang">
+                <input type="text" class="form-control" id="brand_barang" name="brand_barang" value="<?= $barang['brand_barang']?>">
                 <small><?= form_error('brand_barang') ?></small> 
 
                 <label for="category_barang">category_barang</label>
-                <input type="text" class="form-control" id="category_barang" name="category_barang">
+                <input type="text" class="form-control" id="category_barang" name="category_barang" value="<?= $barang['category_barang']?>">
                 <small><?= form_error('category_barang') ?></small> 
 
                 <label for="harga_barang">harga_barang</label>

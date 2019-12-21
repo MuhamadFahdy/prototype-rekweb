@@ -63,9 +63,9 @@ class Admin extends CI_Controller
               'nama_barang'  => $nama_barang,
               'deskripsi_barang'  => $deskripsi_barang,
               'harga_barang'  => $harga_barang,
+              'img_barang'  => $foto['file_name'],
               'brand_barang'  => $brand_barang,
               'category_barang'  => $category_barang,
-              'img_barang'  => $foto['file_name'],
           ]);
             //$this->Barang_Model->tambahBarang($data);
 			$this->db->insert('penjualan',$data);
@@ -93,6 +93,8 @@ class Admin extends CI_Controller
 		$nama_barang = $this->input->post('nama_barang');
 		$deskripsi_barang = $this->input->post('deskripsi_barang');
 		$harga_barang = $this->input->post('harga_barang');
+		$brand_barang = $this->input->post('brand_barang');
+		$category_barang = $this->input->post('category_barang');
 		$id_barang = $this->input->post('id_barang');
 		
 		//$path = './assets/img/';
@@ -110,6 +112,8 @@ class Admin extends CI_Controller
               'nama_barang'  => $nama_barang,
               'deskripsi_barang'  => $deskripsi_barang,
               'harga_barang'  => $harga_barang,
+              'brand_barang'  => $brand_barang,
+              'category_barang'  => $category_barang,
            ]);
            	$this->db->where('id_barang', $id_barang);
 			$this->db->update('penjualan', $data);
