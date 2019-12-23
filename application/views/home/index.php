@@ -1,17 +1,47 @@
 
   <section id="intro">
     <div class="intro-content">
-      <h2>Welcome to Vlava!</h2>
-      <h3>Lorem ipsum dolor sit amet, elit persecuti efficiendi</h3>
+      <h2>Welcome To TechBrain!</h2>
+      <h3>Favorite Brands and Hottest Trends</h3>
       <div>
-        <a href="#section-services" class="btn-get-started scrollto">Get Started</a>
+        <a href="<?= base_url('home/shop');?>" class="btn-get-started scrollto">BUY NOW!</a>
       </div>
     </div>
   </section>
+  
+<!-- <div class="container">
+<div class="row mt-3">
+  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="..." class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="..." class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="..." class="d-block w-100" alt="...">
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div> 
+</div> -->
 
 
 <div class="container-fluid">
-  <div class="row">
+  <div class="row text-center my-4">
 
      <?php foreach ($barang as $key) : ?>
                 <div class="card ml-5 my-4 border-dark" style="width: 250px; height: 100px" >
@@ -27,7 +57,7 @@
                   </div>
 
                 <div class="card-body">
-                  <a href="<?= base_url('auth')?>" class="btn btn-sm btn-light" type="submit">Buy</a>
+                  <a href="<?= base_url('auth')?>" class="btn btn-sm btn-dark" type="submit">Buy</a>
                 </div> 
               </div>
                   <?php endforeach ?>
@@ -38,3 +68,4 @@
 </div>
 </div>
 </div>
+
