@@ -76,7 +76,7 @@
 				echo "<h4>You have no item in your cart";
 			}
 				?>
-		</div>
+		</div> 
 
 		<div class="col-md-2"></div>
 	</div>	

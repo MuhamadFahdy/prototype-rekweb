@@ -18,9 +18,9 @@ class Cart extends CI_Controller
         $this->load->view('templates/user_footer');
 	}
 
-	public function add_to_cart($id)
+	public function add_to_cart($id_barang)
 	{
-		$barang = $this->Barang_Model->find($id);
+		$barang = $this->Barang_Model->find($id_barang);
 		$data = array (
 		'id' => $barang->id_barang, 
 		'name' => $barang->nama_barang, 
@@ -39,9 +39,11 @@ class Cart extends CI_Controller
 		$this->load->view('templates/user_footer');
 	}
 
-	public function delete_cart()
+	public function delete_cart($id_barang)
     {
-    }
+		$this->cart->remove($id_barang);
+		redirect('cart');
+	}
 
     public function pay()
     {
@@ -61,7 +63,7 @@ class Cart extends CI_Controller
         } else {
 			$this->Barang_Model->addDataPembeli();
             $this->session->set_flashdata('flash', 'Made');
-            redirect('home/index');
+            redirect('user/index');
 		}
 		
 		

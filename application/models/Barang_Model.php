@@ -59,9 +59,9 @@ class Barang_Model extends CI_Model {
 		return $this->db->get_where('penjualan', ['id_barang' => $id_barang])->row_array();
 	}
 
-	public function find($id)
+	public function find($id_barang)
   {
-    $result = $this->db->where('id_barang', $id)
+    $result = $this->db->where('id_barang', $id_barang)
                       ->limit(1)
                       ->get('penjualan');
     if($result->num_rows() > 0){
