@@ -5,7 +5,7 @@
                   <form  action="" method="post">
                     <input type="text" class="form-control" placeholder="Cari Data Barang" name="keyword">
                   </form>
-                 <a href="<?= base_url('admin/index')?>" class="btn btn-dark col-lg-3 mb-3"><i class=""></i>kembali</a>
+                 <a href="<?= base_url('admin/index')?>" class="btn btn-dark col-lg-3 mb-3"><i class=""></i>Back</a>
                 <table class="table table-striped table-bordered">
                     <thead class="thead-dark">
                         <tr>

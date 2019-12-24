@@ -8,9 +8,10 @@
                   <form  action="" method="post">
                     <input type="text" class="form-control" placeholder="Cari Data Barang" name="keyword">
                   </form>
+                  </br>
 
                 <a href="<?= base_url('admin/tambah')?>" class="btn btn-dark col-lg-3 mb-3"><i class="fas fa-plus fa-sm"></i> Add Product</a>
-                 <a href="<?= base_url('admin/order')?>" class="btn btn-dark col-lg-3 mb-3"><i class=""></i> lihat orderan</a>
+                 <a href="<?= base_url('admin/order')?>" class="btn btn-dark col-lg-3 mb-3"><i class="fas fa-list fa-sm"></i> See Order</a>
                 <table class="table table-striped table-bordered col-auto">
                     <thead class="thead-dark">
                         <tr>
