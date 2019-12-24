@@ -39,9 +39,13 @@ class Cart extends CI_Controller
 		$this->load->view('templates/user_footer');
 	}
 
-	public function delete_cart($id_barang)
+	public function delete_cart($rowid)
     {
-		$this->cart->remove($id_barang);
+		$data = array(
+            'rowid'   => $rowid,
+            'qty'     => 0
+        );
+		$this->cart->update($data);
 		redirect('cart');
 	}
 

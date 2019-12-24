@@ -33,8 +33,8 @@
                     <td>Rp. <?php echo number_format($barang['price'],  0,',',',')  ?></td>
                     <td>Rp. <?php echo number_format($barang['subtotal'], 0,',',',') ?></td>
                     <td>
-                        <?php echo anchor ('cart/delete_cart','<div class="btn btn-danger btn-sm"><i class="fas fa-trash"></i></div>') ?>
-                            <!-- <div class="btn btn-danger btn-sm"><i class="fas fa-trash"></i></div> -->
+                        <a href= "<?= base_url().'cart/delete_cart/'.$barang['rowid']; ?>">
+                            <div class="btn btn-danger btn-sm"><i class="fas fa-trash"></i></div>
                     </a>
                     </td>
                 </tr>
