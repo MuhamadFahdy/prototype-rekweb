@@ -3,6 +3,7 @@
 <br>
 <br>
 
+<?= $this->session->flashdata('message'); ?>
 <div class="container-fluid">
   <div class="row col-12">
      <?php foreach ($barang as $key) : ?>

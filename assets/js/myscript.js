@@ -2,7 +2,7 @@ const flashData = $('.flash-data').data('flashdata');
 
 if( flashData ) {
     Swal.fire({
-        title: 'Your payment has been ',
+        title: 'Your item has been ',
         text: 'successfully ' + flashData,
         type: 'success'
     });

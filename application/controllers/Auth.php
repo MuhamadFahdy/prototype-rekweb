@@ -72,7 +72,7 @@ class Auth extends CI_Controller
 
 
         if($this->form_validation->run() == false){
-        $data['title'] = 'User Registrasi';
+        $data['title'] = 'User Registration';
         $this->load->view('templates/header', $data);
         $this->load->view('auth/registration');
         $this->load->view('templates/footer');

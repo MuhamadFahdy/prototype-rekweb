@@ -46,16 +46,13 @@ class Cart extends CI_Controller
             'qty'     => 0
         );
 		$this->cart->update($data);
+		$this->session->set_flashdata('flash', 'Deleted');
 		redirect('cart');
 	}
 
     public function pay()
     {
     	$data['title'] = 'Pay Page';
-    	// $this->load->view('templates/header',$data);
-		// $this->load->view('cart/pay');
-		// $this->load->view('templates/footer');
-
 		$this->form_validation->set_rules('name', 'Name', 'required');
         $this->form_validation->set_rules('address', 'Address', 'required');
         $this->form_validation->set_rules('phonenum', 'Phone Number', 'required|numeric');
@@ -66,21 +63,14 @@ class Cart extends CI_Controller
             $this->load->view('templates/user_footer');
         } else {
 			$this->Barang_Model->addDataPembeli();
-            $this->session->set_flashdata('flash', 'Made');
+            $this->session->set_flashdata('message','<div class="alert alert-success" role="alert">You have successfully made your payment.<br>Please check your email for confirmation.</div>');
             redirect('user/index');
 		}
 		
 		
     }
 
-    // public function order_process()
-    // {
-    // 	$this->cart->destroy();
-    // 	$this->load->view('templates/header');
-	// 	$this->load->view('cart/process');
-	// 	$this->load->view('templates/footer');
-	// }
-	
+
 
 		
 }
