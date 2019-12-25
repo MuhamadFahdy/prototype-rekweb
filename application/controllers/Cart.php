@@ -46,7 +46,7 @@ class Cart extends CI_Controller
             'qty'     => 0
         );
 		$this->cart->update($data);
-		$this->session->set_flashdata('flash', 'Deleted');
+		$this->session->set_flashdata('flash', 'DELETED');
 		redirect('cart');
 	}
 
