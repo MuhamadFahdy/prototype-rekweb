@@ -29,5 +29,14 @@ class Home extends CI_Controller
         $this->load->view('home/about', $data);
         $this->load->view('templates/footer');
 	}
+
+	public function cariBarang() {
+		$this->load->model('Barang_model', 'barang');
+		$data['barang'] = $this->barang->cariDataBarang();
+		$data['title'] = 'Techbrain';
+		$this->load->view('templates/header',$data);
+        $this->load->view('home/index_home', $data);
+        $this->load->view('templates/footer');
+	}
 		
 }

@@ -39,6 +39,10 @@
             </button>
             
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
+               <form class="form-inline my-2 my-lg-0" action="<?= base_url('/home/cariBarang')?>" method="post">
+                  <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="keyword">
+                  <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                </form>
                 </div>
                 <li class="nav-item  ml-md-4">
                   <a class="nav-link" href="<?= base_url('home');?>">Home</a>
