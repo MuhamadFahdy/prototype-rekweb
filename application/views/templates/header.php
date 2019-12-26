@@ -46,6 +46,7 @@
                   <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
                 </form>
                 </div>
+
                 <li class="nav-item  ml-md-4">
                   <a class="nav-link" href="<?= base_url('home');?>">Home</a>
                 </li>
@@ -55,18 +56,21 @@
                 <li class="nav-item  ml-md-4">
                   <a class="nav-link" href="<?= base_url('home/about');?>">About</a>
                 </li>
-                <?php if($this->session->userdata('name') != null) : ?>
-                  <li class="nav-item  ml-md-4">
-                    <p class="nav-link" ><?php echo $this->session->userdata('name')?></p>
-                  </li>
-                <?php endif;?>
+                
                 <li class="nav-item  ml-md-4">
                   <?php if ($this->session->userdata('email') == null) : ?>
-          <a class="btn btn-primary" href="<?= base_url('auth');?>">Login</a>
-        <?php else :?>
-          <a class="btn btn-primary" href="<?= base_url('auth/logout');?>">Logout</a>
-        <?php endif; ?>
+                    <a class="btn btn-primary" href="<?= base_url('auth');?>">Login</a>
+
+                  <?php else :?>
+                    <a class="btn btn-primary" href="<?= base_url('auth/logout');?>">Logout</a>
+                  <?php endif; ?>
                 </li>
+
+                <?php if($this->session->userdata('name') != null) : ?>
+                  <li class="nav-item  ml-md-3">
+                    <button type="button" class="btn btn-outline-dark" disabled><?php echo 'Hello, '.$this->session->userdata('name')?></button>
+                  </li>
+                <?php endif;?> 
                 
               </ul>
             </div>

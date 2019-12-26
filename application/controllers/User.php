@@ -60,7 +60,6 @@ class User extends CI_Controller{
 
     }    
  
-
     public function edit(){
         $data['title'] = 'Edit Profile';
         $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
@@ -99,7 +98,8 @@ class User extends CI_Controller{
             redirect('user');
         }
     }
-     public function changePassword() {
+     
+    public function changePassword() {
         $data['title'] = 'Change Password';
         $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
         $this->form_validation->set_rules('current_password', 'Current Password', 'required|trim');
@@ -133,4 +133,14 @@ class User extends CI_Controller{
             }
         }
     }
+
+    public function cariBarang() {
+        $this->load->model('Barang_Model', 'barang');
+        $data['barang'] = $this->barang->cariDataBarang();
+        $data['title'] = 'Techbrain';
+        $this->load->view('templates/user_header',$data);
+        $this->load->view('user/index', $data);
+        $this->load->view('templates/user_footer'); 
+    }
+
 }

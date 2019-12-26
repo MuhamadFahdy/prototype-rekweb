@@ -33,7 +33,7 @@
           <nav class="navbar navbar-expand-md navbar-light">
           
             <a class="navbar-brand" href="<?= base_url("user");?>" role="button" aria-haspopup="true" aria-expanded="false"><img src="<?= base_url('assets/')?>img/techo.png"></a>  
-            <form class="form-inline my-2 my-lg-0" action="<?= base_url('/home/cariBarang')?>" method="post">
+            <form class="form-inline my-2 my-lg-0" action="<?= base_url('/user/cariBarang')?>" method="post">
                   <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="keyword">
                   <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
                 </form>
@@ -54,8 +54,6 @@
                   </ul>
                 </div>
 
-
-
                 <li class="nav-item  ml-md-4">
                   <a class="nav-link" href="<?= base_url('user');?>">Shop</a>
                 </li>
@@ -63,9 +61,7 @@
                 <li class="nav-item  ml-md-4">
                   <a class="nav-link" href="<?= base_url('cart');?>">Cart</a>
                 </li>
-
-                
-                
+              
                 <li class="nav-item  ml-md-4">
                   <?php if ($this->session->userdata('email') == null) : ?>
                     <a class="btn btn-primary" href="<?= base_url('auth');?>">Login</a>
@@ -76,10 +72,9 @@
 
                 <?php if($this->session->userdata('name') != null) : ?>
                 <li class="nav-item  ml-md-3">
-                  <p class="btn btn-outline-dark" ><?php echo 'Hello, '.$this->session->userdata('name')?></p>
+                  <button type="button" class="btn btn-outline-dark" disabled><strong><?php echo 'Hello, '.$this->session->userdata('name')?></strong></button>
                 </li>
                 <?php endif;?> 
-
                 
               </ul>
             </div>

@@ -16,14 +16,14 @@
   <script src="<?= base_url(); ?>assets/js/sweetalert2.all.min.js"></script>
   <script src="<?= base_url(); ?>assets/js/myscript.js"></script>
 
-    <footer>
+<footer>
         <div class="footer-main">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-4 col-md-12 col-sm-12">
                         <div class="footer-widget">
-                            <h4>About FWANFF</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                            <h4>About Tech Brain</h4>
+                            <p>TECH BRAIN is passionate about technology and driven by innovation. We dream, we dare and we strive to create an effortless and joyful digital life for everyone.
                                 </p>
                             <ul>
                                 <li><a href="#"><i class="fab fa-facebook" aria-hidden="true"></i></a></li>
@@ -36,31 +36,37 @@
                             </ul>
                         </div>
                     </div>
+                   
                     <div class="col-lg-4 col-md-12 col-sm-12">
                         <div class="footer-link">
+
                             <h4>Information</h4>
                             <ul>
-                                <li><a href="<?= base_url("about");?>"> About Us</a></li>
-                                <li><a href="#"> Customer Service</a></li>
-                                <li><a href="#"> Our Sitemap</a></li>
-                                <li><a href="#"> Terms &amp; Conditions</a></li>
-                                <li><a href="#"> Privacy Policy</a></li>
-                                <li><a href="#"> Delivery Information</a></li>
+                                <li><a href="<?= base_url("home/about");?>"> About Us</a></li>
+                                <li><a href="<?= base_url("home/about");?>"> Customer Service</a></li>
+                                <li><a href="<?= base_url("home/about");?>"> Our Sitemap</a></li>
+                                <li><a href="<?= base_url("home/about");?>"> Terms &amp; Conditions</a></li>
+                                <li><a href="<?= base_url("home/about");?>"> Privacy Policy</a></li>
+                                <li><a href="<?= base_url("home/about");?>"> Delivery Information</a></li>
                             </ul>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-12 col-sm-12">
                         <div class="footer-link-contact">
+                      
                             <h4>Contact Us</h4>
                             <ul>
                                 <li>
-                                    <p><i class="fas fa-map-marker-alt"></i>Address: Michael I. Days 3756 <br>Preston Street Wichita,<br> KS 67213 </p>
+                                    <p><i class="fas fa-map-marker-alt"></i>Jl. Dr. Setiabudi No.193 <br>Gegerkalong,
+                                    <br>Kec. Sukasari, 
+                                    <br>Kota Bandung, 
+                                    <br>Jawa Barat 40153</p>
                                 </li>
                                 <li>
-                                    <p><i class="fas fa-phone-square"></i>Phone: <a href="tel:+1-888705770">+1-888 705 770</a></p>
+                                    <p><i class="fas fa-phone-square"></i>Phone: <a href="tel:+62 (022) 2021440">+62 (022) 2021440</a></p>
                                 </li>
                                 <li>
-                                    <p><i class="fas fa-envelope"></i>Email: <a href="mailto:contactinfo@gmail.com">contactinfo@gmail.com</a></p>
+                                    <p><i class="fas fa-envelope"></i>Email: <a href="unpas@unpas.ac.id">unpas@unpas.ac.id</a></p>
                                 </li>
                             </ul>
                         </div>
