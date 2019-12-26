@@ -1,0 +1,34 @@
+#spotlight-zone{
+	border-bottom: 0px solid #CCC;
+}
+#main-zone-4-2 #article-zone.column-4 {
+	height: 830px;
+}
+#main-zone-4-2 #article-zone.column-4 #video-story {
+	height: 152px;
+}
+#main-zone-4-2 #video-story #MainZone_Video h2{
+	display: block;
+}
+@media (max-width: 959px) and (min-width: 719px){
+	#main-zone-4-2 #article-zone.column-4 {
+		height: 1190px;
+	}
+	#main-zone-4-2 #article-zone.column-4 #video-story {
+		height: 547px;
+	}
+	#main-search-zone #social-media {
+		right: -9px;
+	}
+}
+@media (max-width: 719px){
+	#article-zone.column-4 #video-story .video-list li {
+		width: 100% !important;
+		height: 100px !important;
+	}
+	#extra_link>.navbar>.navbar-inner>.nav>.navbar-li>a {
+		padding-left: 8px;
+		padding-right: 8px;
+		font-size: 12px;
+	}
+}

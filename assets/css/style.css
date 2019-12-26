@@ -2397,12 +2397,12 @@
 }
  
 
-
+/* 
 #intro {
   width: 100%;
   height: 700px;
   position: relative;
-  background: url(../img/img1.jpg) top center;
+  background: url(../img/car.jpg) top center;
   background-size: cover;
 }
 
@@ -2410,7 +2410,7 @@
     #intro {
         background-attachment: fixed;
     }
-}
+} */
 
 .intro-content {
     background: rgba(0, 0, 0, 0.4);

@@ -1,4 +1,4 @@
-
+<!-- 
   <section id="intro">
     <div class="intro-content">
       <h2>Welcome To TechBrain!</h2>
@@ -7,11 +7,15 @@
         <a href="<?= base_url('home/shop');?>" class="btn-get-started scrollto">BUY NOW!</a>
       </div>
     </div>
-  </section>
-  
-<!-- <div class="container">
-<div class="row mt-3">
-  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  </section> -->
+
+  <section class="shipping_details section_padding">
+
+  <div class="container-fluid"> 
+
+
+<div class="bd-example">
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
   <ol class="carousel-indicators">
     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
     <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -19,13 +23,13 @@
   </ol>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="..." class="d-block w-100" alt="...">
+      <img src="<?= base_url('assets/img/cari.jpg') ?>" class="d-block w-100 p-3" style="width: 100px; height: 100;">
     </div>
     <div class="carousel-item">
-      <img src="..." class="d-block w-100" alt="...">
+      <img src="<?= base_url('assets/img/cari2.jpg') ?>" class="d-block w-100" alt="...">
     </div>
     <div class="carousel-item">
-      <img src="..." class="d-block w-100" alt="...">
+      <img src="<?= base_url('assets/img/car.jpg') ?>" class="d-block w-100" alt="...">
     </div>
   </div>
   <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -37,11 +41,12 @@
     <span class="sr-only">Next</span>
   </a>
 </div> 
-</div> -->
+</div>
 
 
-<div class="container-fluid">
-  <div class="row text-center my-4">
+
+ <div class="container-fluid">
+  <div class="row text-center my-2">
 
      <?php foreach ($barang as $key) : ?>
                 <div class="card ml-5 my-4 border-dark" style="width: 250px; height: 100px" >
@@ -67,5 +72,5 @@
 </div>
 </div>
 </div>
-</div>
+</div> 
 
