@@ -49,6 +49,7 @@ class Cart extends CI_Controller
 		$this->session->set_flashdata('flash', 'DELETED');
 		redirect('cart');
 	}
+	
 
     public function pay()
     {
@@ -63,7 +64,8 @@ class Cart extends CI_Controller
             $this->load->view('templates/user_footer');
         } else {
 			$this->Barang_Model->addDataPembeli();
-            $this->session->set_flashdata('message','<div class="alert alert-success" role="alert">You have successfully made your payment.<br>Please check your email for confirmation.</div>');
+			$this->cart->destroy();
+			$this->session->set_flashdata('message','<div class="alert alert-success" role="alert">You have successfully made your payment.<br>Please check your email for confirmation.</div>');
             redirect('user/index');
 		}
 		
