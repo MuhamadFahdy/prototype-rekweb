@@ -16,7 +16,6 @@ class Admin extends CI_Controller
         $this->load->view('templates/admin_footer');
 		}
 
-
 	public function tambah(){	
 		$this->load->library('upload');
 		$data['user'] = $this->db->get('user')->row_array();
@@ -73,7 +72,7 @@ class Admin extends CI_Controller
         	}
     	}
     }
-	}
+}
 
 	public function ubah($id_barang) {	
 		$this->load->model('Barang_Model');

@@ -35,20 +35,20 @@
 <!--  views barang di home  -->
 
  <div class="container-fluid">
-  <div class="row text-center my-2">
+  <div class="row text-center">
 
      <?php foreach ($barang as $key) : ?>
-                <div class="card ml-5 my-4 border-dark" style="width: 250px; height: 100px" >
-                <img src="<?= base_url('assets/')?>img/<?= $key['img_barang']?>" class="card-img-top" alt="logo" width="200" height="200">
+                <div class="card ml-4 mt-4 border-dark" style="width: 285px; height: 480px" >
+                <img src="<?= base_url('assets/')?>img/<?= $key['img_barang']?>" class="card-img-top" alt="logo" width="300" height="250">
 
                 <div class="card-body">
-                  <h4 class="card-title"><?= $key['nama_barang'] ?></h4>
-                  <p class="card-text"><?= $key['brand_barang'] ?></p> 
+                  <h3 class="card-title"><strong><?= $key['nama_barang'] ?></strong></h3>
+                  <p class="card-text"><strong><?= $key['brand_barang'] ?></strong></p> 
                 </div>
 
                   <div class="list-group-item">
-                    <h4>Rp. <?= number_format($key['harga_barang'], 0,',',',') ?>
-                  </div>
+                    <h3><strong>Rp. <?= number_format($key['harga_barang'], 0,',',',') ?>
+                  </strong></h3></div>
 
                 <div class="card-body">
                   <a href="<?= base_url('auth')?>" class="btn btn-sm btn-dark" type="submit">Buy</a>

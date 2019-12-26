@@ -8,8 +8,8 @@
 <div class="container-fluid">
   <div class="row text-center">
     <?php foreach ($barang as $key) : ?>
-                <div class="card ml-4 mt-4 border-dark" style="width: 270px; height: 440px" >
-                <img src="<?= base_url('assets/')?>img/<?= $key['img_barang']?>" class="card-img-top" alt="logo" width="200" height="200">
+                <div class="card ml-4 mt-4 border-dark" style="width: 285px; height: 480px" >
+                <img src="<?= base_url('assets/')?>img/<?= $key['img_barang']?>" class="card-img-top" alt="logo" width="300" height="250">
 
                 <div class="card-body">
                   <h3 class="card-title"><strong><?= $key['nama_barang'] ?></strong></h3>
