@@ -11,7 +11,6 @@
 
   <section class="shipping_details section_padding">
 
-  <div class="container-fluid"> 
 
 
 <div class="bd-example">
@@ -23,10 +22,10 @@
   </ol>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="<?= base_url('assets/img/cari.jpg') ?>" class="d-block w-100 p-3" style="width: 100px; height: 100;">
+      <img src="<?= base_url('assets/img/cari.jpg') ?>" class="d-block w-100">
     </div>
     <div class="carousel-item">
-      <img src="<?= base_url('assets/img/cari2.jpg') ?>" class="d-block w-100" alt="...">
+      <img src="<?= base_url('assets/img/cari2.jpg') ?>" class="d-block w-100" alt="..." style="max-height: 100%;">
     </div>
     <div class="carousel-item">
       <img src="<?= base_url('assets/img/cari.jpg') ?>" class="d-block w-100" alt="...">
