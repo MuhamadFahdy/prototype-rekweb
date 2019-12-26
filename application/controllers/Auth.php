@@ -27,12 +27,14 @@ class Auth extends CI_Controller
         $email = $this->input->post('email');
         $password = $this->input->post('password');
         $user= $this->db->get_where('user', ['email' => $email])->row_array();
+        
         if ($user) {
             if($user['is_active']== 1){
             if(password_verify($password, $user['password'])){
                 $data = [
                     'email' => $user['email'],
-                    'role_id' => $user['role_id']
+                    'role_id' => $user['role_id'],
+                    'name' =>$user['name']
                 ];
                 $this->session->set_userdata($data);
                 if ($user['role_id'] == 1) {
@@ -87,7 +89,7 @@ class Auth extends CI_Controller
 
     public function logout()
     {
-        $data = array('role_id', 'email');
+        $data = array('role_id', 'email','name');
 
         $this->session->unset_userdata($data);
         redirect('home');

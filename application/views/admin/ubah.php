@@ -3,7 +3,7 @@
       <div class="row">
         <div class=" col-6">
           <br>
-          <h3>Form Tambah Barang</h3>
+          <h3>Form Ubah</h3>
           <form method="post" action="" enctype="multipart/form-data">
               <div class="form-group">
                 <input type="hidden" name="id_barang" value="<?= $barang['id_barang']?>">
@@ -33,7 +33,7 @@
                   </div>
                 <small><?= form_error('img_barang') ?></small>
 
-              <button type="submit" class="btn btn-primary" name="ubah" >Ubah data mahasiswa</button>
+              <button type="submit" class="btn btn-primary" name="ubah" >Ubah data</button>
           </form>
         </div>
       </div>
