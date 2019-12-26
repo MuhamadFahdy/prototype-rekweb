@@ -33,6 +33,10 @@
           <nav class="navbar navbar-expand-md navbar-light">
           
             <a class="navbar-brand" href="<?= base_url("user");?>" role="button" aria-haspopup="true" aria-expanded="false"><img src="<?= base_url('assets/')?>img/techo.png"></a>  
+            <form class="form-inline my-2 my-lg-0" action="<?= base_url('/home/cariBarang')?>" method="post">
+                  <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="keyword">
+                  <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                </form>
             
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
@@ -61,7 +65,11 @@
                 </li>
 
                 <li class="nav-item  ml-md-4">
-                  <a class="btn btn-danger" href="<?= base_url('auth/logout   ');?>">Logout</a>
+                 <?php if ($this->session->userdata('email') == null) : ?>
+          <a class="btn btn-primary" href="<?= base_url('auth');?>">Login</a>
+        <?php else :?>
+          <a class="btn btn-primary" href="<?= base_url('auth/logout');?>">Logout</a>
+        <?php endif; ?>
                 </li>
                 
               </ul>

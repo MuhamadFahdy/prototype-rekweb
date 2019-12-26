@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -51,10 +53,14 @@
                   <a class="nav-link" href="<?= base_url('home/shop');?>">Shop</a>
                 </li>
                 <li class="nav-item  ml-md-4">
-                  <a class="nav-link" href="<?= base_url('auth');?>">Login</a>
+                  <a class="nav-link" href="<?= base_url('home/about');?>">About</a>
                 </li>
                 <li class="nav-item  ml-md-4">
-                  <a class="nav-link" href="<?= base_url('home/about');?>">About</a>
+                  <?php if ($this->session->userdata('email') == null) : ?>
+          <a class="btn btn-primary" href="<?= base_url('auth');?>">Login</a>
+        <?php else :?>
+          <a class="btn btn-primary" href="<?= base_url('auth/logout');?>">Logout</a>
+        <?php endif; ?>
                 </li>
                 
               </ul>

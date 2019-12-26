@@ -37,10 +37,13 @@
         <a class="nav-link" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><?= $user['name'] ?>
           <i class="fas fa-user-circle fa-fw"></i>
         </a>
-       <li>
-        
-        <a class="btn btn-primary" href="<?= base_url('home/index');?>">Logout</a>
-      </li>
+       <li class="nav-item  ml-md-4">
+                  <?php if ($this->session->userdata('email') == null) : ?>
+          <a class="btn btn-primary" href="<?= base_url('auth');?>">Login</a>
+        <?php else :?>
+          <a class="btn btn-primary" href="<?= base_url('auth/logout');?>">Logout</a>
+        <?php endif; ?>
+                </li>
       </li>
     </ul>
 
