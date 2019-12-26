@@ -3,8 +3,8 @@
 
 <br>
 <br>    
-    <div class="row mt-4">
-        <h4>Shopping Cart</h4>
+    <div class="row mt-5">
+        <h3><strong>Shopping Cart</strong></h3>
 
                  <!--  <form  action="" method="post">
                     <input type="text" class="form-control" placeholder="Cari Data Barang" name="keyword">
@@ -33,6 +33,10 @@
                     <td>Rp. <?php echo number_format($barang['price'],  0,',',',')  ?></td>
                     <td>Rp. <?php echo number_format($barang['subtotal'], 0,',',',') ?></td>
                     <td>
+
+                        <a href= "<?= base_url('user/index') ?>">
+                            <div class="btn btn-primary btn-sm"><i class="fas fa-plus"></i></div>
+
                         <a href= "<?= base_url().'cart/delete_cart/'.$barang['rowid']; ?>">
                             <div class="btn btn-danger btn-sm"><i class="fas fa-trash"></i></div>
                     </a>
@@ -50,6 +54,7 @@
         <div class="container">
         <div class="row ml-5">
         <div align="right">
+
             <a href="<?= base_url('cart/pay') ?>"><button class="btn btn-sm btn-primary mb-3">Pay Now!</button></a>
 
         </div>

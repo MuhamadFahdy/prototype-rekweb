@@ -42,12 +42,12 @@
 
                             <h4>Information</h4>
                             <ul>
-                                <li><a href="<?= base_url("home/about");?>"> About Us</a></li>
-                                <li><a href="<?= base_url("home/about");?>"> Customer Service</a></li>
-                                <li><a href="<?= base_url("home/about");?>"> Our Sitemap</a></li>
-                                <li><a href="<?= base_url("home/about");?>"> Terms &amp; Conditions</a></li>
-                                <li><a href="<?= base_url("home/about");?>"> Privacy Policy</a></li>
-                                <li><a href="<?= base_url("home/about");?>"> Delivery Information</a></li>
+                                <li><a href=" "> About Us</a></li>
+                                <li><a href=" "> Customer Service</a></li>
+                                <li><a href=" "> Our Sitemap</a></li>
+                                <li><a href=" "> Terms &amp; Conditions</a></li>
+                                <li><a href=" "> Privacy Policy</a></li>
+                                <li><a href=" "> Delivery Information</a></li>
                             </ul>
                         </div>
                     </div>

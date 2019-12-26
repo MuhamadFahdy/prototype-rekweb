@@ -31,9 +31,9 @@ class User extends CI_Controller{
         $this->load->model('Barang_Model');
         $data['aaa'] = $this->Barang_Model->getBarangID($prod_id);
         $data['title'] = 'Details Page';
-        $this->load->view('templates/header', $data);
+        $this->load->view('templates/user_header', $data);
         $this->load->view('user/buy', $data);
-        $this->load->view('templates/footer');
+        $this->load->view('templates/user_footer');
     }   
 
     public function belisatu()
