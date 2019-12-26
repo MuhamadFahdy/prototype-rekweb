@@ -29,7 +29,7 @@
       <img src="<?= base_url('assets/img/cari2.jpg') ?>" class="d-block w-100" alt="...">
     </div>
     <div class="carousel-item">
-      <img src="<?= base_url('assets/img/car.jpg') ?>" class="d-block w-100" alt="...">
+      <img src="<?= base_url('assets/img/cari.jpg') ?>" class="d-block w-100" alt="...">
     </div>
   </div>
   <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
