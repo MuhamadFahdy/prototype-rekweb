@@ -63,7 +63,11 @@
                 <li class="nav-item  ml-md-4">
                   <a class="nav-link" href="<?= base_url('cart');?>">Cart</a>
                 </li>
-
+                 <?php if($this->session->userdata('name') != null) : ?>
+                  <li class="nav-item  ml-md-4">
+                    <p class="nav-link" ><?php echo $this->session->userdata('name')?></p>
+                  </li>
+                <?php endif;?> 
                 <li class="nav-item  ml-md-4">
                  <?php if ($this->session->userdata('email') == null) : ?>
           <a class="btn btn-primary" href="<?= base_url('auth');?>">Login</a>
